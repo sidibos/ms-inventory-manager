@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Return\ReturnController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Dashboards\DashboardController;
@@ -85,6 +86,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
     Route::post('/orders/store', [OrderController::class, 'store'])->name('orders.store');
+
+    // Route Returns
+    Route::get('/returns', [ReturnController::class, 'show'])->name('returns.index');
+    Route::get('/returns/approved', [ReturnController::class, 'approvedReturns'])->name('returns.approvedReturns');
+    Route::get('/returns/report', [ReturnController::class, 'returnReport'])->name('returns.returnReport');
+
+
 
     // SHOW ORDER
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
