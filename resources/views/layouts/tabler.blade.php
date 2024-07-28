@@ -344,7 +344,7 @@
                                             </a>
                                             <a class="dropdown-item"
                                                 href="{{ route('purchases.approvedPurchases') }}">
-                                                {{ __('Approval') }}
+                                                {{ __('Approved Purchases') }}
                                             </a>
                                             <a class="dropdown-item"
                                                 href="{{ route('purchases.purchaseReport') }}">
@@ -386,10 +386,18 @@
                                             </a>
                                             <a class="dropdown-item"
                                                 href="{{ route('returns.approvedReturns') }}">
-                                                {{ __('Approval') }}
+                                                {{ __('Completed Returns') }}
                                             </a>
-                                            <a class="dropdown-item"
-                                                href="{{ route('returns.returnReport') }}">
+                                            <a class="dropdown-item" href="{{ route('returns.approvedReturns') }}">
+                                                {{ __('Pending Returns') }}
+                                            </a>
+                                            <a class="dropdown-item" href="{{ route('returns.approvedReturns') }}">
+                                                {{ __('Approved Returns') }}
+                                            </a>
+                                            <a class="dropdown-item" href="{{ route('returns.approvedReturns') }}">
+                                                {{ __('Rejected Returns') }}
+                                            </a>
+                                            <a class="dropdown-item" href="{{ route('returns.returnReport') }}">
                                                 {{ __('Daily Return Report') }}
                                             </a>
                                         </div>

@@ -88,6 +88,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/orders/store', [OrderController::class, 'store'])->name('orders.store');
 
     // Route Returns
+    Route::get('/order-returns', [ReturnController::class, 'index'])->name('returns.index');
+
+    // Route Returns
     Route::get('/returns', [ReturnController::class, 'show'])->name('returns.index');
     Route::get('/returns/approved', [ReturnController::class, 'approvedReturns'])->name('returns.approvedReturns');
     Route::get('/returns/report', [ReturnController::class, 'returnReport'])->name('returns.returnReport');
